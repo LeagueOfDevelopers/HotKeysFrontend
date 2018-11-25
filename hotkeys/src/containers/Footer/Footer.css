@@ -1,0 +1,13 @@
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    min-height: 50px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #5922d4;
+}
+.Footer{
+    align-content: center;
+}

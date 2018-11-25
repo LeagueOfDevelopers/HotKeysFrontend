@@ -1,0 +1,26 @@
+.Header{
+    width: 100%;
+    min-height: 50px;
+    height: auto;
+    align-items: center;
+    border-radius: none;
+    color: #ffffff;
+    background-color: #5922d4;
+}
+
+.HeaderTabs{
+    list-style: none;
+    padding: 15px;
+}
+
+.LeftTabs{
+    float: left;
+    padding-right: 10px;
+}
+.Login{
+    float: right;
+    margin-left: auto;
+    margin-right: 0em;
+    align-items: center;
+    padding-right: 5px;
+}
