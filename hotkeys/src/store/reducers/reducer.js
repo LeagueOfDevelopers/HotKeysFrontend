@@ -1,7 +1,7 @@
 const defaultState = {
     isLogined: false,
-    goods: [],
-    cart: []
+    lesson: "",
+    tasks: []
 }
 
 const reducer = (prevState = defaultState, action) => {
@@ -11,7 +11,16 @@ const reducer = (prevState = defaultState, action) => {
                 ...prevState,
                 isLogined: true
             };
-    
+        case "GET_TASKS":
+            return {
+                ...prevState,
+                tasks: action.tasks
+            }
+        case "GET_LESSON":
+            return {
+                ...prevState,
+                lesson: action.lesson
+            }
         default:
             return prevState;
     }

@@ -1,15 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react';
 
 import './LearningWindow.css'
-
-// const mapStateToProps = state => ({
-//     session: state.session
-// })
-
-// const mapDispatchToProps = dispatch => ({
-//     login: input => dispatch(loginAction(input))
-// })
 
 class LearningWindow extends Component {
     constructor(props) {
@@ -23,7 +14,7 @@ class LearningWindow extends Component {
     handleKey = (event) => {
         const key = event.which;
         console.log(key);
-        if (event.ctrlKey && key != 17)
+        if (event.ctrlKey && key !== 17)
             this.taskCheck(key)
     }
 

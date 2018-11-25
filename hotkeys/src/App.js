@@ -8,23 +8,11 @@ import Footer from './containers/Footer/Footer'
 
 import './App.css';
 
-const mapStateToProps = state => ({
-  isLoginned: false
-})
-
-const mapDispatchToProps = dispatch => {
-
-}
-
 class App extends Component {
-  constructor(props){
-    super(props);
-  }
-  
   render() {
     return (
       <Fragment>
-        <Header onInputChange={this.onInputChange} />
+        <Header />
         <LearningWindow />
         <Footer />
       </Fragment>
@@ -32,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default App;

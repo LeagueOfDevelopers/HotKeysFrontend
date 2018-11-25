@@ -2,9 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
 
-import LeftButtons from '../../components/LeftButtons/LeftButtons'
-import Login from '../../components/Login/Login'
-
 import './Header.css'
 
 const Header = () => {
