@@ -1,0 +1,16 @@
+.LearningWindow{
+    width: 250px;
+    height: 350px;
+
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: grey;
+
+    box-sizing: border-box;
+
+    /* text-align: center; */
+
+    padding: 30px;
+    margin: auto;
+}
