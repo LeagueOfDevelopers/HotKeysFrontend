@@ -15,8 +15,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
-    "test:watch": "npm test -- --watch",
+    "test": "react-scripts test --env=jsdom --coverage --coverageDirectory=./coverage",
+    "test:watch": "npm test --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
