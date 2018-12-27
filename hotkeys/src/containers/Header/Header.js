@@ -7,12 +7,9 @@ import './Header.css'
 const Header = () => {
     return <nav className="Header">
         <ul className="HeaderTabs">
-            <li className="LeftTabs">HotKeys</li>
-            <li className="LeftTabs">Home</li>
-            <li className="LeftTabs">About us</li>
-            <li className="Login"> Create an account!</li>
-            <li className="Login"> or </li>
-            <li className="Login">Sign in </li>
+            <li className="Logo">Hot!<br/>Keys</li>
+            <li className="Login"> Регистрация</li>
+            <li className="Login">Вход </li>
         </ul>
     </nav>
 }

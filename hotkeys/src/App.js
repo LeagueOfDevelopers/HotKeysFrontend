@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 
 import Header from './containers/Header/Header'
+import HomePage from "./containers/HomePage/HomePage";
 import LearningWindow from './containers/LearningWindow/LearningWindow'
 import Footer from './containers/Footer/Footer'
 
@@ -28,10 +29,13 @@ class App extends Component {
 
   render() {
     return (
-      <Fragment>
+      <Fragment >
+        <div className='App'>
         <Header />
+        <HomePage />
         <LearningWindow />
         <Footer />
+        </div>
       </Fragment>
     );
   }

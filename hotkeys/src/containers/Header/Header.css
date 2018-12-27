@@ -1,21 +1,32 @@
 .Header{
     width: 100%;
     min-height: 50px;
-    height: auto;
+    background-color: #767676;
     align-items: center;
     border-radius: none;
     color: #ffffff;
-    background-color: #5922d4;
 }
 
 .HeaderTabs{
     list-style: none;
-    padding: 15px;
 }
 
-.LeftTabs{
+.Logo{
+    width: 80px;
+    height: 45px;
+
     float: left;
-    padding-right: 10px;
+    text-align: center;
+
+    font-family: Montserrat;
+    font-weight: bold;
+    background-color: #f25634;
+    
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-left: 1%;
+    padding-top: 5px;
+
 }
 .Login{
     float: right;
@@ -23,4 +34,5 @@
     margin-right: 0em;
     align-items: center;
     padding-right: 5px;
+    padding: 15px;
 }

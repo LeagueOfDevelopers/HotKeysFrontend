@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import { connect } from 'react-redux';
 
-import Task from '../../components/Task/Task'
+import Task from '../../components/Task/Task';
 
 import './LearningWindow.css'
 
@@ -83,7 +83,8 @@ class LearningWindow extends Component {
     }
 
     render() {
-        return <div className="LearningWindow">
+        return (<Fragment>
+        <div className="LearningWindow">
             Here is your first task<br />
             Hold hotkeys in fixed order:
             <ul>
@@ -92,6 +93,8 @@ class LearningWindow extends Component {
                 })}
             </ul>
         </div>
+        </Fragment>
+        )
     }
 }
 export default connect(mapStateToProps)(LearningWindow);
