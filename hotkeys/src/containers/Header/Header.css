@@ -1,38 +1,64 @@
-.Header{
+#Header{
     width: 100%;
-    min-height: 50px;
+    height: 80px;
+    position: relative;
     background-color: #767676;
     align-items: center;
     border-radius: none;
     color: #ffffff;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
-
-.HeaderTabs{
+ul{
+    display: block;
+    height: 80px;
+   
+}
+.header-tabs{
     list-style: none;
 }
 
-.Logo{
-    width: 80px;
-    height: 45px;
-
+.logo{
+    width: 140px;
+    height: 100%;
+    display: flex;
     float: left;
     text-align: center;
-
-    font-family: Montserrat;
-    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
     background-color: #f25634;
     
     letter-spacing: normal;
     color: #ffffff;
-    margin-left: 1%;
-    padding-top: 5px;
-
 }
-.Login{
+.right{
+    height: 100%;
+    
     float: right;
-    margin-left: auto;
-    margin-right: 0em;
+    margin: auto;
+    
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding-right: 5px;
-    padding: 15px;
+    
+}
+
+.right:last-child{
+    margin-right: 30px;
+}
+
+.login{
+    font-family: "PT Sans";
+    font-weight: normal;
+    font-size: 18px;
+    padding: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000000;
 }
