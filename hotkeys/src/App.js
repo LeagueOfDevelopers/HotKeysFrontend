@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import { connect } from 'react-redux';
+import { BrowserRouter as Router, Route, Link, Switch, withRouter } from "react-router-dom";
 
 import Header from './containers/Header/Header'
 import HomePage from "./containers/HomePage/HomePage";
@@ -31,14 +32,18 @@ class App extends Component {
     return (
       <Fragment >
         <div className='App'>
-        <Header />
-        <HomePage />
-        <LearningWindow />
-        <Footer />
+          <Header />
+
+          <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route exact path='/try' component={LearningWindow} />
+          </Switch>
+
+          <Footer />
         </div>
       </Fragment>
     );
   }
 }
 
-export default connect(null, mapDispatchToProps)(App);
+export default withRouter(connect(null, mapDispatchToProps)(App));

@@ -21,13 +21,13 @@ a{
 
 .hotKeys {
     font-family: Montserrat;
-    font-size: 200px;
+    font-size: 160px;
     font-weight: bold;
     color: #f25634;
     margin: auto;
     width: 562px;
     height: auto;
-    padding: 30px;
+    padding: 10px;
 }
 
 .btn {
@@ -39,7 +39,7 @@ a{
     border: none;
     border-radius: 2px;
     padding: 0.5em 1em;
-    margin: 15px auto;
+    margin: 0px auto;
     width: 225px;
     height: 66px;
     background-color: #ebebeb;
@@ -50,8 +50,8 @@ a{
     color: #ebebeb;
     font-size: 36px;
     width: 395px;
-    height: 150px;
-    margin: 15px auto;
+    height: 110px;
+    margin: 0px auto;
 }
 
 .grey-wrapper {
@@ -115,6 +115,7 @@ a{
     letter-spacing: normal;
     color: #ffffff;
     background-color: #000000;
+    border: none;
     width: 140px;
     height: 51px;
     margin-top: 22px;

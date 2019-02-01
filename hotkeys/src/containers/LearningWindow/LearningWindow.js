@@ -3,11 +3,21 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 
 import Task from '../../components/Task/Task';
-
+import {loadTasks} from '../../actions'
 import './LearningWindow.css'
 
 const mapStateToProps = (state) => ({
     tasks: state.tasks
+  })
+
+  const testTasks = [
+    { "id": 1, "name": "ctrl+q", "answer": 65 },
+    { "id": 2, "name": "ctrl+w", "answer": 66 },
+    { "id": 3, "name": "ctrl+e", "answer": 67 },
+    { "id": 4, "name": "ctrl+r", "answer": 68 }]
+  
+  const mapDispatchToProps = dispatch => ({
+    loadTasks: (tasks) => dispatch(loadTasks(tasks)),
   })
 
 class LearningWindow extends Component {
@@ -18,6 +28,10 @@ class LearningWindow extends Component {
             taskNum: 0
         })
     }
+
+    componentDidMount() {
+        this.props.loadTasks(testTasks)
+      }
 
     handleKey = (event) => {
         const key = event.which;
@@ -97,4 +111,4 @@ class LearningWindow extends Component {
         )
     }
 }
-export default connect(mapStateToProps)(LearningWindow);
+export default connect(mapStateToProps, mapDispatchToProps)(LearningWindow);

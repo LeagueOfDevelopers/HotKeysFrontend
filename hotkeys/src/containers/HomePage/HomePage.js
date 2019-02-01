@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
+import {Link} from 'react-router-dom'
+
 import PriceColumns from '../../components/PriceColumns/PriceColumns';
 import './HomePage.css';
 
 import hotkeys_mobile from '../../assets/images/HotKeys_mobile.png';
+import LearningWindow from '../LearningWindow/LearningWindow';
 
 class HomePage extends Component {
 
@@ -13,7 +16,9 @@ class HomePage extends Component {
                 <div className='main-screen'>
                     <h1 className='hotKeys'>HOT! KEYS</h1>
                     <p className='start'>Начните изучать горячие клавиши прямо сейчас!</p>
-                    <button className='btn'>Начать</button>
+                    <Link to='/try'>
+                        <button className='btn' >Начать</button>
+                    </Link>
                 </div>
                 <div className='container'>
                     <div className='grey-wrapper introduction'>
