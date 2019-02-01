@@ -5,8 +5,8 @@ class Footer extends Component{
 
     render(){
         return(
-            <footer className="Footer">
-                Here is the footer!
+            <footer id="footer">
+            
             </footer>
         )
     }

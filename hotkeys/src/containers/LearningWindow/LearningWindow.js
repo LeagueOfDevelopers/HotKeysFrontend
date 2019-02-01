@@ -1,6 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
+import { connect } from 'react-redux';
+
+import Task from '../../components/Task/Task';
+import {loadTasks} from '../../actions'
 import './LearningWindow.css'
+
+const mapStateToProps = (state) => ({
+    tasks: state.tasks
+  })
+
+  const testTasks = [
+    { "id": 1, "name": "ctrl+q", "answer": 65 },
+    { "id": 2, "name": "ctrl+w", "answer": 66 },
+    { "id": 3, "name": "ctrl+e", "answer": 67 },
+    { "id": 4, "name": "ctrl+r", "answer": 68 }]
+  
+  const mapDispatchToProps = dispatch => ({
+    loadTasks: (tasks) => dispatch(loadTasks(tasks)),
+  })
 
 class LearningWindow extends Component {
     constructor(props) {
@@ -11,22 +29,30 @@ class LearningWindow extends Component {
         })
     }
 
+    componentDidMount() {
+        this.props.loadTasks(testTasks)
+      }
+
     handleKey = (event) => {
         const key = event.which;
         console.log(key);
-        if (event.ctrlKey && key !== 17)
+        if (event.ctrlKey && key !== 17){
             this.taskCheck(key)
+        }
+            
     }
 
     taskCheck = (key) => {
         switch (this.state.taskNum) {
             case 0:
                 console.log("First Task")
-                key === 65
-                    ? this.setState({
+                if (key === 65){
+                    this.setState({
                         taskNum: this.state.taskNum + 1
-                    })
-                    : console.log("Wrong combination! ctrl" + key)
+                    });
+                    
+                }
+                else console.log("Wrong combination! ctrl" + key)
                 break;
 
             case 1:
@@ -71,17 +97,18 @@ class LearningWindow extends Component {
     }
 
     render() {
-        
-        return <div className="LearningWindow">
+        return (<Fragment>
+        <div className="LearningWindow">
             Here is your first task<br />
-            Enter in fixed order:
+            Hold hotkeys in fixed order:
             <ul>
-                <li>ctrl+a {this.state.taskNum > 0 ? " 🥳 Nice!" : null}</li>
-                <li>ctrl+b  {this.state.taskNum > 1 ? " 🥳 Nice!" : null}</li>
-                <li>ctrl+c   {this.state.taskNum > 2 ? " 🥳 Nice!" : null}</li>
-                <li>ctrl+d{this.state.taskNum > 3 ? " 🥳 Nice!" : null}</li>
+                {this.props.tasks.map(task =>{
+                    return <Task key={task.id} name={task.name} id={task.id} taskNum={this.state.taskNum}/>
+                })}
             </ul>
         </div>
+        </Fragment>
+        )
     }
 }
-export default LearningWindow;
+export default connect(mapStateToProps, mapDispatchToProps)(LearningWindow);
