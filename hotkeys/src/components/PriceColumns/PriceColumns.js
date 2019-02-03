@@ -7,7 +7,7 @@ const PriceColumns = (props) =>{
         <div id='bar-element'>
             <h1>Price</h1>
             <div id='column'></div>
-            <a href='#'>ПОСМОТРЕТЬ</a>
+            <a href='/'>ПОСМОТРЕТЬ</a>
         </div>
     )
 }

@@ -6,7 +6,6 @@ import PriceColumns from '../../components/PriceColumns/PriceColumns';
 import './HomePage.css';
 
 import hotkeys_mobile from '../../assets/images/HotKeys_mobile.png';
-import LearningWindow from '../LearningWindow/LearningWindow';
 
 class HomePage extends Component {
 
@@ -25,18 +24,18 @@ class HomePage extends Component {
                         <div className='quarter'>
                             <h1>Почему Hot!Keys</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href='#'>ПОПРОБОВАТЬ</a>
+                            <a href='/'>ПОПРОБОВАТЬ</a>
                         </div>
-                        <div class="quarter" style={{backgroundColor: '#2e2e2e'}}>
+                        <div className="quarter" style={{backgroundColor: '#2e2e2e'}}>
 
                         </div>
-                        <div class="quarter" style={{backgroundColor: '#2e2e2e'}}>
+                        <div className="quarter" style={{backgroundColor: '#2e2e2e'}}>
 
                         </div>
-                        <div class="quarter">
+                        <div className="quarter">
                             <h1>Программы</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href='#'>ПОСМОТРЕТЬ ВСЕ</a>
+                            <a href='/'>ПОСМОТРЕТЬ ВСЕ</a>
                         </div>
                     </div>
 
