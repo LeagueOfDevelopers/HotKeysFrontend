@@ -48,8 +48,15 @@ class LearningWindow extends Component {
     }
     componentDidMount() {
         this.props.loadTasks(testTasks);
-        hotkeys('*',(event)=>{if(hotkeys.shift) console.log('shift is pressed!');
-        if(hotkeys.ctrl) console.log('ctrl is pressed!');})
+        hotkeys('command+r',(event)=>{event.preventDefault();});
+        hotkeys('command+a',(event)=>{event.preventDefault();});
+        hotkeys('*,wcj,shift+c', (event) => {
+            console.log('do something',event);
+          });
+          hotkeys('*', function(){
+            console.log(hotkeys.getPressedKeyCodes()); //=> [17, 65] or [70]
+          });
+        
       }
 
 

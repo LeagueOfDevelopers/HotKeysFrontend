@@ -1,6 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
 
 import Modal from 'react-modal';
 import styled from 'styled-components';
@@ -54,16 +53,25 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            modalIsOpen: false
+            rgModalIsOpen: false,
+            signInModalIsOpen: false
         }
     }
 
-    openModal = () => {
-        this.setState({ modalIsOpen: true });
+    openRgModal = () => {
+        this.setState({ rgModalIsOpen: true });
     }
 
-    closeModal = () => {
-        this.setState({ modalIsOpen: false });
+    closeRgModal = () => {
+        this.setState({ rgModalIsOpen: false });
+    }
+
+    openSignInModal = () => {
+        this.setState({ signInModalIsOpen: true });
+    }
+
+    closeSignInModal = () => {
+        this.setState({ signInModalIsOpen: false });
     }
 
     render() {
@@ -72,24 +80,31 @@ class Header extends Component {
                 <div id="Header">
                     <ul className="header-tabs">
                         <li className="logo">Hot!<br />Keys</li>
-                        <li className='right'><button className="login" onClick={this.openModal}>Регистрация</button></li>
+                        <li className='right'><button className="login" onClick={this.openRgModal}>Регистрация</button></li>
                         <li className='right'><button
                             className='login'
-                            style={{ backgroundColor: 'transparent' }}>
+                            onClick={this.openSignInModal}
+                            style={{ backgroundColor: 'transparent' }}
+                        >
                             Войти
-                </button>
+                        </button>
                         </li>
                     </ul>
                 </div>
                 <div>
                     <Modal
-                        isOpen={this.state.modalIsOpen}
+                        isOpen={this.state.rgModalIsOpen}
                         style={customStyles}
-                        onRequestClose={this.closeModal}
+                        onRequestClose={this.closeRgModal}
                     >
                         <p style={{ color: 'white', fontFamily: 'Montserrat', fontSize: 24 }}>Sign up</p>
-                        <p style={{ color: 'white', fontFamily: 'Montserrat' }}>or <a style={{ color: '#f25634', textDecoration: 'none' }} href='/'>sign in</a> to your account</p>
-                        
+                        <p style={{ color: 'white', fontFamily: 'Montserrat' }}>or
+                            <a
+                                style={{ color: '#f25634', textDecoration: 'none', cursor: 'pointer' }}
+                                onClick={(event) => { this.closeRgModal(); this.openSignInModal() }}> sign in
+                            </a> to your account
+                        </p>
+
                         <Input placeholder="   Login here.." onChange={this.handleChange} />
                         <br />
                         <Input placeholder="   Password.." onChange={this.handleChange} />
@@ -101,6 +116,21 @@ class Header extends Component {
                         <ModalButton bgColor={'#ffffff'} onClick={this.closeModal}>Google</ModalButton>
                         <br />
                         <ModalButton bgColor={'#4680c2'} onClick={this.closeModal}>VK</ModalButton>
+                    </Modal>
+                </div>
+                <div>
+                    <Modal
+                        isOpen={this.state.signInModalIsOpen}
+                        style={customStyles}
+                        onRequestClose={this.closeSignInModal}
+                    >
+                        <p style={{ color: 'white', fontFamily: 'Montserrat', fontSize: 24 }}>Sign in</p>
+
+                        <Input placeholder="   Login here.." onChange={this.handleChange} />
+                        <br />
+                        <Input placeholder="   Password.." onChange={this.handleChange} />
+                        <br />
+                        <ModalButton bgColor={'#f25634'} onClick={this.openModal}>SIGN IN</ModalButton>
                     </Modal>
                 </div>
             </div>

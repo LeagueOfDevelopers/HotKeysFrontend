@@ -130,4 +130,11 @@ a{
     width: 399px;
     right: 50px;
     bottom: -272px;
+
+    
 }
+@media screen and (max-width: 760px) {
+        .mobileImage{
+          display: none;
+        }
+      }
