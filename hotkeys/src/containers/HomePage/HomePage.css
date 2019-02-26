@@ -57,7 +57,7 @@ a{
 .grey-wrapper {
     background-color: #c4c4c4;
     height: 666px;
-    width: 940px;
+    width: 100%;
     margin: 0 auto 60px;
 }
 
@@ -130,4 +130,11 @@ a{
     width: 399px;
     right: 50px;
     bottom: -272px;
+
+    
 }
+@media screen and (max-width: 760px) {
+        .mobileImage{
+          display: none;
+        }
+      }
