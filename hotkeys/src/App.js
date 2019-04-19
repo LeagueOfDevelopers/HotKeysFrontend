@@ -1,11 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
-import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link, Switch, withRouter } from "react-router-dom";
+import {  Route, Switch, withRouter } from "react-router-dom";
 
-
-
-import Header from './containers/Header/Header'
 import HomePage from "./containers/HomePage/HomePage";
 import LearningWindow from './containers/LearningWindow/LearningWindow'
 import Footer from './containers/Footer/Footer'
