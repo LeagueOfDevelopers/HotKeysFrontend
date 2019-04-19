@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import PriceColumns from '../../components/PriceColumns/PriceColumns';
 import './HomePage.css';
@@ -362,13 +362,17 @@ class HomePage extends Component {
                     
                         <Container width='370px'>
 
-                            <p style={{ color: 'white', fontFamily: 'Montserrat', fontSize: 24, textAlign: 'left', margin: '20px 0 5px 0' }}>Sign up</p>
-                            <p style={{ color: 'white', fontFamily: 'Montserrat', marginBottom: '20px', textAlign: 'left' }}>or
-                            <a
+                            <p style={{ color: 'white', fontFamily: 'Montserrat', fontSize: 24, textAlign: 'left', margin: '20px 0 5px 0' }}>
+                                Sign up
+                            </p>
+                            <p style={{ color: 'white', fontFamily: 'Montserrat', marginBottom: '20px', textAlign: 'left' }}>
+                                or
+                                <a
+                                    href="/"
                                     style={{ color: '#f25634', textDecoration: 'none', cursor: 'pointer' }}
                                     onClick={(event) => { this.closeRgModal(); this.openSignInModal() }}> sign in
-                            </a> to your account
-                        </p>
+                                </a> to your account
+                            </p>
 
                             <Input placeholder="   E-mail" onChange={this.handleChange} />
                             <br />
@@ -384,7 +388,9 @@ class HomePage extends Component {
                             </ModalButton>
                             <br />
                             <ModalButton bgColor={'#ffffff'} onClick={this.closeModal}>
-                            <div style={{float:'left' , marginLeft: '14px', margin: '6px 0px 0px 14px'}}> <Icon /></div>
+                            <div style={{float:'left' , marginLeft: '14px', margin: '6px 0px 0px 14px'}}>
+                                <Icon />
+                            </div>
                             <DefaultSpan color='black'>Log in with Google</DefaultSpan>
                             </ModalButton>
                             <br />
@@ -488,10 +494,6 @@ class HomePage extends Component {
                             </Container>
                         </Container>
                 </WhiteRectangle>
-
-                        
-
-
             </div>
         )
     }
